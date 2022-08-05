@@ -1,4 +1,4 @@
-import urllib.request, os, threading, time, random, sys, layer, httpx, socks5, socks, proxy, proxies, shutup
+import urllib.request, os, threading, time, random, sys,
 from sys import stdout
 
 ref = [
