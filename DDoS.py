@@ -1,4 +1,4 @@
-import urllib.request, os, threading, time, random, sys,
+import urllib.request, os, threading, time, random, sys
 from sys import stdout
 
 ref = [
